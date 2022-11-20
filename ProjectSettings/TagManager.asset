@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CinemachineTarget
+  - Button 1
+  - Button 2
+  - Button 3
+  - Button 4
+  - Button 5
+  - Button 6
+  - LeftArrow
+  - RightArrow
   layers:
   - Default
   - TransparentFX
