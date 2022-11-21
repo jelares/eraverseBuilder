@@ -17,29 +17,29 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             targetPos = new Vector3(transform.position.x, transform.position.y + increment, transform.position.z);
 
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow))
         {
             targetPos = new Vector3(transform.position.x, transform.position.y - increment, transform.position.z);
 
         }
-        else if (Input.GetKeyDown(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W))
         {
             targetPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + increment);
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
             targetPos = new Vector3(transform.position.x, transform.position.y, transform.position.z - increment);
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
             targetPos = new Vector3(transform.position.x + increment, transform.position.y, transform.position.z);
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
             targetPos = new Vector3(transform.position.x - increment, transform.position.y, transform.position.z);
         }

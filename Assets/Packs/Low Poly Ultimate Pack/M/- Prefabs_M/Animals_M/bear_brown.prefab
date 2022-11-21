@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33175851042838734}
   - component: {fileID: 23178965843848666}
   - component: {fileID: 64797851573140896}
+  - component: {fileID: 753389637295533818}
   m_Layer: 0
   m_Name: bear_brown
   m_TagString: Untagged
@@ -99,3 +100,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 25644fdb850987743b9d4d04e6a9b856, type: 3}
+--- !u!114 &753389637295533818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618932462221820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d0097ccfb3f4578a06c6be11976504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
