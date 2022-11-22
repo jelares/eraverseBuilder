@@ -79,14 +79,15 @@ public class PageManager : MonoBehaviour
     void PrevPage()
     {
         Debug.Log("prev page");
-        prevPage.SetActive(true);
         gameObject.SetActive(false);
+        prevPage.SetActive(true);
+        
     }
     void NextPage()
     {
         Debug.Log("next page");
-        nextPage.SetActive(true);
         gameObject.SetActive(false);
+        nextPage.SetActive(true);
     }
     // Update is called once per frame
     
