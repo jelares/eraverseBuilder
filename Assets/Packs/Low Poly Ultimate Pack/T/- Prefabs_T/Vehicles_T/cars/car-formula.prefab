@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33759502629259538}
   - component: {fileID: 23319202240958176}
   - component: {fileID: 64932476322189256}
+  - component: {fileID: 3202363164823672237}
   m_Layer: 0
   m_Name: car-formula-wheel_BL
   m_TagString: Untagged
@@ -29,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.6925049, y: 0.29334018, z: -1.6542053}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4303736009710758}
   m_RootOrder: 1
@@ -52,9 +54,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -66,6 +71,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -78,6 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &64932476322189256
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -88,10 +95,28 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: e883525d2a7793e4bbad507173ee1e9a, type: 3}
+--- !u!114 &3202363164823672237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014763176418708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc3f44296a514a5f851e505608b3869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1431148830624662}
+  selected: 0
+  clicks: 0
+  timeBtwClick: 0
+  startTimeBtwClick: 1.5
+  clicked: 0
 --- !u!1 &1401739727082970
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +129,7 @@ GameObject:
   - component: {fileID: 33156010949980462}
   - component: {fileID: 23753558084452318}
   - component: {fileID: 64554173068740928}
+  - component: {fileID: 6698180204918226854}
   m_Layer: 0
   m_Name: car-formula-wheel_BR
   m_TagString: Untagged
@@ -121,6 +147,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.93200684, y: 0.34547153, z: -1.9512024}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4303736009710758}
   m_RootOrder: 2
@@ -144,9 +171,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -158,6 +188,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -170,6 +201,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &64554173068740928
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -180,10 +212,28 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: e883525d2a7793e4bbad507173ee1e9a, type: 3}
+--- !u!114 &6698180204918226854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401739727082970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc3f44296a514a5f851e505608b3869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1431148830624662}
+  selected: 0
+  clicks: 0
+  timeBtwClick: 0
+  startTimeBtwClick: 1.5
+  clicked: 0
 --- !u!1 &1431148830624662
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4303736009710758}
+  - component: {fileID: 5974696673485905693}
   m_Layer: 0
   m_Name: car-formula
   m_TagString: Untagged
@@ -210,6 +261,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4528267194957060}
   - {fileID: 4759808421382584}
@@ -219,6 +271,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5974696673485905693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431148830624662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d57b1042ed3498f9da77121d8165e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objSelected: 0
 --- !u!1 &1723863202841700
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +296,7 @@ GameObject:
   - component: {fileID: 33350275912478372}
   - component: {fileID: 23808901750348190}
   - component: {fileID: 64754848532438038}
+  - component: {fileID: 7882192840369244807}
   m_Layer: 0
   m_Name: car-formula-base
   m_TagString: Untagged
@@ -248,6 +314,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4303736009710758}
   m_RootOrder: 0
@@ -271,9 +338,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -285,6 +355,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -297,6 +368,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &64754848532438038
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -307,10 +379,28 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300010, guid: e883525d2a7793e4bbad507173ee1e9a, type: 3}
+--- !u!114 &7882192840369244807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723863202841700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc3f44296a514a5f851e505608b3869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1431148830624662}
+  selected: 0
+  clicks: 0
+  timeBtwClick: 0
+  startTimeBtwClick: 1.5
+  clicked: 0
 --- !u!1 &1748284428149446
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +413,7 @@ GameObject:
   - component: {fileID: 33641167057961454}
   - component: {fileID: 23581210041647082}
   - component: {fileID: 64155853525407010}
+  - component: {fileID: 6989279647684686619}
   m_Layer: 0
   m_Name: car-formula-wheel_FR
   m_TagString: Untagged
@@ -340,6 +431,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.68888855, y: 0.26526472, z: 1.459259}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4303736009710758}
   m_RootOrder: 4
@@ -363,9 +455,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -377,6 +472,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -389,6 +485,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &64155853525407010
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -399,10 +496,28 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300006, guid: e883525d2a7793e4bbad507173ee1e9a, type: 3}
+--- !u!114 &6989279647684686619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748284428149446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc3f44296a514a5f851e505608b3869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1431148830624662}
+  selected: 0
+  clicks: 0
+  timeBtwClick: 0
+  startTimeBtwClick: 15
+  clicked: 0
 --- !u!1 &1767970467779970
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +530,7 @@ GameObject:
   - component: {fileID: 33378249120144752}
   - component: {fileID: 23022421979341244}
   - component: {fileID: 64178934646001712}
+  - component: {fileID: 5862260383813296966}
   m_Layer: 0
   m_Name: car-formula-wheel_FL
   m_TagString: Untagged
@@ -432,6 +548,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.68888855, y: 0.2652649, z: 1.459259}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4303736009710758}
   m_RootOrder: 3
@@ -455,9 +572,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -469,6 +589,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -481,6 +602,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &64178934646001712
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -491,7 +613,25 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300008, guid: e883525d2a7793e4bbad507173ee1e9a, type: 3}
+--- !u!114 &5862260383813296966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767970467779970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc3f44296a514a5f851e505608b3869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1431148830624662}
+  selected: 0
+  clicks: 0
+  timeBtwClick: 0
+  startTimeBtwClick: 1.5
+  clicked: 0

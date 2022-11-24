@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3873504408558176375}
   - component: {fileID: 3873504408559176375}
   - component: {fileID: 4675212760341913753}
+  - component: {fileID: 8395879693556237666}
   m_Layer: 0
   m_Name: lawn-mower-ride_FR
   m_TagString: Untagged
@@ -29,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.44863892, y: 0.19853741, z: 0.6911316}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3873504408561076319}
   m_RootOrder: 4
@@ -52,9 +54,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -66,6 +71,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -78,6 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &4675212760341913753
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -88,10 +95,28 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300006, guid: a5bcc34e43612764d81af06751283a81, type: 3}
+--- !u!114 &8395879693556237666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873504408561439861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc3f44296a514a5f851e505608b3869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 3873504408561439871}
+  selected: 0
+  clicks: 0
+  timeBtwClick: 0
+  startTimeBtwClick: 1.5
+  clicked: 0
 --- !u!1 &3873504408561439863
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +129,7 @@ GameObject:
   - component: {fileID: 3873504408558176377}
   - component: {fileID: 3873504408559176377}
   - component: {fileID: 6007420856215807629}
+  - component: {fileID: 4432041573299370136}
   m_Layer: 0
   m_Name: lawn-mower-ride_FL
   m_TagString: Untagged
@@ -121,6 +147,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.44863892, y: 0.19853741, z: 0.6911316}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3873504408561076319}
   m_RootOrder: 3
@@ -144,9 +171,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -158,6 +188,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -170,6 +201,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &6007420856215807629
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -180,10 +212,28 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: a5bcc34e43612764d81af06751283a81, type: 3}
+--- !u!114 &4432041573299370136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873504408561439863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc3f44296a514a5f851e505608b3869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 3873504408561439871}
+  selected: 0
+  clicks: 0
+  timeBtwClick: 0
+  startTimeBtwClick: 1.5
+  clicked: 0
 --- !u!1 &3873504408561439865
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +246,7 @@ GameObject:
   - component: {fileID: 3873504408558176379}
   - component: {fileID: 3873504408559176379}
   - component: {fileID: 507782853323180217}
+  - component: {fileID: 4103144983021918550}
   m_Layer: 0
   m_Name: lawn-mower-ride_BR
   m_TagString: Untagged
@@ -213,6 +264,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.45838928, y: 0.28788102, z: -0.7139282}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3873504408561076319}
   m_RootOrder: 2
@@ -236,9 +288,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -250,6 +305,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -262,6 +318,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &507782853323180217
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -272,10 +329,28 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300008, guid: a5bcc34e43612764d81af06751283a81, type: 3}
+--- !u!114 &4103144983021918550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873504408561439865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc3f44296a514a5f851e505608b3869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 3873504408561439871}
+  selected: 0
+  clicks: 0
+  timeBtwClick: 0
+  startTimeBtwClick: 1.5
+  clicked: 0
 --- !u!1 &3873504408561439867
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +363,7 @@ GameObject:
   - component: {fileID: 3873504408558176381}
   - component: {fileID: 3873504408559176381}
   - component: {fileID: 1362977838454779825}
+  - component: {fileID: 1188254862645131481}
   m_Layer: 0
   m_Name: lawn-mower-ride_BL
   m_TagString: Untagged
@@ -305,6 +381,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.45838928, y: 0.28788102, z: -0.7139282}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3873504408561076319}
   m_RootOrder: 1
@@ -328,9 +405,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -342,6 +422,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -354,6 +435,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1362977838454779825
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -364,10 +446,28 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: a5bcc34e43612764d81af06751283a81, type: 3}
+--- !u!114 &1188254862645131481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873504408561439867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc3f44296a514a5f851e505608b3869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 3873504408561439871}
+  selected: 0
+  clicks: 0
+  timeBtwClick: 0
+  startTimeBtwClick: 1.5
+  clicked: 0
 --- !u!1 &3873504408561439869
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +480,7 @@ GameObject:
   - component: {fileID: 3873504408558176383}
   - component: {fileID: 3873504408559176383}
   - component: {fileID: 5829868801456092437}
+  - component: {fileID: 8557316211644984133}
   m_Layer: 0
   m_Name: lawn-mower-ride-base
   m_TagString: Untagged
@@ -397,6 +498,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.0000000029802294, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3873504408561076319}
   m_RootOrder: 0
@@ -420,9 +522,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -434,6 +539,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -446,6 +552,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &5829868801456092437
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -456,10 +563,28 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: a5bcc34e43612764d81af06751283a81, type: 3}
+--- !u!114 &8557316211644984133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873504408561439869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc3f44296a514a5f851e505608b3869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 3873504408561439871}
+  selected: 0
+  clicks: 0
+  timeBtwClick: 0
+  startTimeBtwClick: 1.5
+  clicked: 0
 --- !u!1 &3873504408561439871
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3873504408561076319}
+  - component: {fileID: 4714659615219731315}
   m_Layer: 0
   m_Name: lawn-mower-ride
   m_TagString: Untagged
@@ -486,6 +612,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3873504408561076317}
   - {fileID: 3873504408561076315}
@@ -495,3 +622,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4714659615219731315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873504408561439871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d57b1042ed3498f9da77121d8165e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objSelected: 0

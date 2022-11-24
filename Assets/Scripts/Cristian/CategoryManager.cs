@@ -20,7 +20,7 @@ public class CategoryManager : MonoBehaviour
 
     void ButtonPress()
     {
-        Debug.Log("category" + activeCat.name + "pressed");
+        Debug.Log("category " + activeCat.name + " pressed");
         
         activeCat.SetActive(true);
         
