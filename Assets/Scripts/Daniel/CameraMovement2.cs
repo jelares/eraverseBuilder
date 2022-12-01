@@ -5,8 +5,9 @@ using UnityEngine;
 public class CameraMovement2 : MonoBehaviour
 {
     public CharacterController controller;
-
     public float speed = 12f;
+    public float flySpeed = 5f;
+    Vector3 velocity;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,15 @@ public class CameraMovement2 : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
+
+        velocity.y += flySpeed * Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.Space)){
+            controller.Move(velocity * Time.deltaTime);
+        }
+        else if (Input.GetKey(KeyCode.LeftControl)){
+            controller.Move(-velocity * Time.deltaTime);
+        }
 
     }
 }
