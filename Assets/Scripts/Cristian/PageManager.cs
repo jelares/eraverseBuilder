@@ -49,32 +49,48 @@ public class PageManager : MonoBehaviour
     void But1()
     {
         Debug.Log("Button 1 pressed");
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().amtObjects += 1;
         Instantiate(prefabButton1, prefabPosition, Quaternion.identity);
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().prefabs.Add(prefabButton1);
     }
     void But2()
     {
         Debug.Log("Button 2 pressed");
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().amtObjects += 1;
         Instantiate(prefabButton2, prefabPosition, Quaternion.identity);
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().prefabs.Add(prefabButton2);
+
+
     }
     void But3()
     {
         Debug.Log("Button 3 pressed");
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().amtObjects += 1;
         Instantiate(prefabButton3, prefabPosition, Quaternion.identity);
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().prefabs.Add(prefabButton3);
     }
     void But4()
     {
         Debug.Log("Button 4 pressed");
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().amtObjects += 1;
         Instantiate(prefabButton4, prefabPosition, Quaternion.identity);
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().prefabs.Add(prefabButton4);
+
     }
     void But5()
     {
         Debug.Log("Button 5 pressed");
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().amtObjects += 1;
         Instantiate(prefabButton5, prefabPosition, Quaternion.identity);
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().prefabs.Add(prefabButton5);
+
     }
     void But6()
     {
         Debug.Log("Button 6 pressed");
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().amtObjects += 1;
         Instantiate(prefabButton6, prefabPosition, Quaternion.identity);
+        GameObject.Find("ObjectManager").GetComponent<ObjectMan>().prefabs.Add(prefabButton6);
     }
     void PrevPage()
     {
