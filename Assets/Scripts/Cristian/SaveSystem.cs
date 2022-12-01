@@ -1,41 +1,81 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public static class SaveSystem
+public class SaveSystem : MonoBehaviour
 {
-    public static void SaveObjects(List<GameObject> objects)
+    private ObjectData objectData;
+    private string path;
+    private string persistentPath;
+
+    public Button saveButton;
+    public Button loadButton;
+
+    private void CreateObjectData()
     {
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/objects.prefabs";
-        FileStream stream = new FileStream(path, FileMode.Create);
-
-        ObjectData data = new ObjectData(objects);
-
-        formatter.Serialize(stream,data);
-        stream.Close();
+        objectData = new ObjectData();
     }
 
-    public static ObjectData LoadObjects()
+    private void SetPaths()
     {
-        string path = Application.persistentDataPath + "/objects.prefabs";
-        if (File.Exists(path))
+        path = Application.dataPath + Path.AltDirectorySeparatorChar + "SaveData.json";
+        persistentPath = Application.persistentDataPath + Path.AltDirectorySeparatorChar + "SaveData.json";
+
+    }
+    
+    public void SaveData()
+    {
+        string savePath = persistentPath;
+        Debug.Log("Saving data at" + savePath);
+        string json = JsonUtility.ToJson(objectData);
+        Debug.Log(json);
+
+        using StreamWriter writer = new StreamWriter(savePath);
+        writer.Write(json);
+    }
+
+    public ObjectData LoadData()
+    {
+        using StreamReader reader = new StreamReader(persistentPath);
+        string json = reader.ReadToEnd();
+        
+        ObjectData data = JsonUtility.FromJson<ObjectData>(json);
+        Debug.Log(data.ToString());
+        return data;
+    }
+    void Start()
+    {
+        CreateObjectData();
+        SetPaths();
+
+        saveButton.onClick.AddListener(Save);
+        loadButton.onClick.AddListener(Load);
+
+    }
+    void Save()
+    {
+        CreateObjectData();
+        SetPaths();
+        SaveData();
+    }
+    
+    void Load()
+    {
+        Debug.Log("Loading");
+        SceneManager.LoadScene("BuilderDemo");
+        ObjectData data = LoadData();
+        
+        for (int i = 0; i < data.amt; i++)
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
-
-            ObjectData data = formatter.Deserialize(stream) as ObjectData;
-            stream.Close();
-
-            return data;
-
-
-        }
-        else
-        {
-            Debug.LogError("Save file not found in " + path);
-            return null;
+            Vector3 position;
+            position.x = data.position[i,0];
+            position.y = data.position[i,1];
+            position.z = data.position[i,2];
+            
+            Instantiate(data.savedPrefabs[i], position, Quaternion.identity);
         }
     }
 }

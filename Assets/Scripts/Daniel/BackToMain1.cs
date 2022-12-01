@@ -7,6 +7,6 @@ public class BackToMain1 : MonoBehaviour
 {
     public void OpenMenu ()
     {
-        SceneManager.LoadScene (sceneBuildIndex:0);
+        SceneManager.LoadScene("Menu");
     }
 }
